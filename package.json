@@ -1,0 +1,40 @@
+{
+  "name": "ged.ts",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": "gameroman",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gameroman-npm/ged.ts.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "imports": {
+    "#lib/*": "./src/lib/*.ts"
+  },
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "format": "oxfmt",
+    "lint": "oxlint",
+    "test": "bun test --dots",
+    "build": "bunx --bun tsdown",
+    "prepublishOnly": "bun run build"
+  },
+  "devDependencies": {
+    "@gameroman/config": "0.2.9",
+    "@types/bun": "1.3.14",
+    "oxfmt": "0.62.0",
+    "oxlint": "1.77.0",
+    "oxlint-tsgolint": "7.0.2001",
+    "tsdown": "0.22.14",
+    "typescript": "7.0.2"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}
